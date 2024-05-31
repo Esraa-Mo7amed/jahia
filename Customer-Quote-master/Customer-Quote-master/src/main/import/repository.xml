@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+    <modules jcr:primaryType="jnt:modules">
+        <customer-quote j:dependencies="default grid"
+                      j:installedModules="customer-quote"
+                      j:modulePriority="0"
+                      j:moduleType="module"
+                      j:title="Customer Quote"
+                      jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                      jcr:primaryType="jnt:module">
+                
+                <portlets jcr:primaryType="jnt:portletFolder"/>
+                <files jcr:primaryType="jnt:folder"/>
+                <contents jcr:primaryType="jnt:contentFolder"/>
+                <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
+                    <files jcr:primaryType="jnt:folder"/>
+                    <contents jcr:primaryType="jnt:contentFolder"/>
+                    <customer-quote-template j:applyOn="jnt:customerQuote"
+                                     j:defaultTemplate="true"
+                                     j:hiddenTemplate="false"
+                                     j:priority="10"
+                                     jcr:mixinTypes="jmix:accessControlled"
+                                     jcr:primaryType="jnt:contentTemplate">
+                        <j:acl j:inherit="true" jcr:primaryType="jnt:acl"/>
+                        <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="Customer Quote Template"/>
+                        <pagecontent jcr:primaryType="jnt:contentList">
+                            <main-row column="1col16"
+                            jcr:mixinTypes="jmix:accessControlled"
+                            jcr:primaryType="jnt:row">
+                                <j:acl j:inherit="true" jcr:primaryType="jnt:acl"/>
+                                <main-row-col1 jcr:primaryType="jnt:contentList">
+                                    <main-resource-display j:mainResourceView="detail"
+                                               jcr:mixinTypes="jmix:accessControlled"
+                                               jcr:primaryType="jnt:mainResourceDisplay">
+                                        <j:acl j:inherit="true" jcr:primaryType="jnt:acl"/>
+                                </main-resource-display>
+                                    <back-to-parent-page jcr:mixinTypes="jmix:accessControlled"
+                                             jcr:primaryType="jnt:backToParentPage">
+                                    <j:acl j:inherit="true" jcr:primaryType="jnt:acl"/>
+                                </back-to-parent-page>
+                            </main-row-col1>
+                        </main-row>
+                    </pagecontent>
+                </customer-quote-template>
+            </templates>
+                
+        </customer-quote>
+    </modules>
+</content>
